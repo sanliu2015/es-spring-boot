@@ -14,6 +14,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 
+/**
+ * @author luquan.peng
+ */
 @RestController
 @RequestMapping("doctor")
 @Api(description = "添加测试数据 -- 医生")
