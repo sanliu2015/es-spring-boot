@@ -23,8 +23,9 @@ spring:
       cluster-nodes: 127.0.0.1:9300
       cluster-name: my-application  # 配置集群名，默认为elasticsearch，如果手动更改过，这里一定要指定
 
+
 server:
-  port: 8080
+  port: 8089
   tomcat:
     uri-encoding: utf-8
     max-threads: 1000

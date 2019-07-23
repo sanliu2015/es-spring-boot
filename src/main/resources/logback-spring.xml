@@ -35,9 +35,16 @@
             <pattern>%d{'yyyy-MM-dd HH:mm:ss,SSS'} %5level - [%-21thread] %-50logger{50} : %m%n</pattern>
         </encoder>
     </appender>
+    <!-- logstash日志手机 -->
+    <appender name="LOGSTASH" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
+        <destination>localhost:5000</destination>
+        <encoder charset="UTF-8" class="net.logstash.logback.encoder.LogstashEncoder" />
+    </appender>
+
     <root level="INFO">
         <appender-ref ref="STDOUT"/>
         <appender-ref ref="COMMON"/>
+        <appender-ref ref="LOGSTASH"/>
     </root>
 </configuration>
 
